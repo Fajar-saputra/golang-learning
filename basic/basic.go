@@ -47,4 +47,16 @@ func  main()  {
 	fmt.Println(level)
 	fmt.Println(damage)
 
+	// type declarations
+	type NoKtp string
+	var ktpElvira NoKtp= "123123123"
+	fmt.Println(ktpElvira) 
+	fmt.Println(NoKtp("3211321321")) 
+	fmt.Println()
+
+	// perbandingan
+	const nama1 = "elvira"
+	const nama2 = "Elvira"
+	fmt.Println(nama1 == nama2)
+
 }
