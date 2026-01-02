@@ -1,12 +1,8 @@
 package main
 
-import "fmt"
-
-	func printArr(arr...string) {
-		for i := 0; i < len(arr); i++ {
-			fmt.Println(arr[i], " ")
-		}
-	}
+import (
+	"fmt"
+)
 
 func main()  {
 
@@ -26,7 +22,7 @@ func main()  {
 	}
 
 	for i := 0; i < len(namaSiswa); i++ {
-		fmt.Println(namaSiswa)
+		fmt.Print(namaSiswa[i], " ")
 	}
 	// example
 	var angka = [3]int {
@@ -37,12 +33,12 @@ func main()  {
 		fmt.Println(angka[i])
 	}
 
-	// slice
-	var dataWarga = [7]string {
-		"kamal", "arsyad", "romi", "bintang", "egi", "yudi", "akbar",
+	// array banyak 
+	var daftarNilai = [...]int {
+		1,2,3,4,7,8,9,
 	}
 
-
-
-	printArr(dataWarga)
+	for i := 0; i < len(daftarNilai); i++ {
+	fmt.Print(daftarNilai[i])
+	}
 }

@@ -59,4 +59,8 @@ func  main()  {
 	const nama2 = "Elvira"
 	fmt.Println(nama1 == nama2)
 
+
+	// bisa pakai :=
+	contohAja := "ini bisa tidak pakai var"
+	fmt.Println(contohAja)
 }
