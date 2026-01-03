@@ -26,4 +26,37 @@ func main()  {
 	wargaBaru := [...]string{"fathir", "iqbal", "kelvin", "fazil"}
 	fmt.Println(append(iniSlice, wargaBaru[3]))
 
+	// make slice
+	newslice := make([]string, 2,5)
+
+	newslice[0] = "elvin"
+	newslice[1] = "Elvin"
+
+	fmt.Println(newslice)
+	fmt.Println(newslice[0])
+	fmt.Println(newslice[1])
+	fmt.Println(len(newslice))
+	fmt.Println(cap(newslice))
+	
+	// copy slice
+	wargaPadang := dataWarga[:]
+	fmt.Println(wargaPadang)
+	// copySlice := make([]string,len(wargaPadang), cap(wargaPadang))
+	// copy(copySlice, wargaPadang)
+	// fmt.Fprintln(copySlice)
+
+
+	//  array vs slice
+	iniArray := [...]int {1,2,3,4,7,8,9,10}
+
+	iniSlice := make([]int, 4, 10)
+	iniSlice[0] = 1
+	iniSlice[1] = 2
+	iniSlice[2] = 3
+	iniSlice[3] = 4
+
+	fmt.Println(iniArray)
+	fmt.Println(iniSlice)
+
+	// masih banyak yang salah
 }
