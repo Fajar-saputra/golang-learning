@@ -3,7 +3,7 @@ package main
 // fmt untuk menampilkan sesuatu dengan method Println
 import "fmt"
 
-func  main()  {
+func  belajarVariable()  {
 	fmt.Println("Hello, Golang 🚀")
 
 	// tipe data int

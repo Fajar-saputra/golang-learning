@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func belajarLoops()  {
 	
 	count := 10
 

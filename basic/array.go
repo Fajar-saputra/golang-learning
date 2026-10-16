@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func main()  {
+func belajarArray()  {
 
 	fmt.Println("hello dulu gak")
 	// example

@@ -37,7 +37,7 @@ func sumAll(numbers...int) int {
 	return total
 }
 
-func main()  {
+func belajarFunc()  {
 	helloWorld()
 	kataKataHariIni("tinggalkan semua harapan, kecuali golang!!")
 	add(10, 20)

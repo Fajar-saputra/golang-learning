@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func belajarMap()  {
 	// example
 	person := map[string]string{
 		"firts name" : "Elvira",

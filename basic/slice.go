@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func belajarSlice()  {
 	
 	 dataWarga := [...]string {
 			"kamal", 
@@ -49,11 +49,11 @@ func main()  {
 	//  array vs slice
 	iniArray := [...]int {1,2,3,4,7,8,9,10}
 
-	iniSlice := make([]int, 4, 10)
-	iniSlice[0] = 1
-	iniSlice[1] = 2
-	iniSlice[2] = 3
-	iniSlice[3] = 4
+	// iniSlice := make([]int, 4, 10)
+	// iniSlice[0] = 1
+	// iniSlice[1] = 2
+	// iniSlice[2] = 3
+	// iniSlice[3] = 4
 
 	fmt.Println(iniArray)
 	fmt.Println(iniSlice)
