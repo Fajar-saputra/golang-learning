@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 // example function basic
 func helloWorld()  {
@@ -15,6 +18,12 @@ func kataKataHariIni(kataKata string)  {
 // functoin with return
 func add(x int, y int) int {
 	return  x + y;
+}
+
+func kali(x int, y int) (hasil int) {
+	hasil = x * y
+	fmt.Printf("Hasilnya : %v", hasil)
+	return
 }
 
 // function with parameter and return mutliple value
@@ -37,6 +46,13 @@ func sumAll(numbers...int) int {
 	return total
 }
 
+// Function as Parameter (First-Class Functions)
+func sapaKawan (nama string, filter func(string) string){
+	diBersihKan := filter(nama)
+	fmt.Println("Hello ", diBersihKan)
+}
+
+
 func belajarFunc()  {
 	helloWorld()
 	kataKataHariIni("tinggalkan semua harapan, kecuali golang!!")
@@ -50,4 +66,24 @@ func belajarFunc()  {
 	nilai := []int{80,70,88,87,82,91}
 	totalNilai := sumAll(nilai...)
 	fmt.Println(totalNilai)
+
+
+	//  Anonymous Function
+	sapaSaya := func (sapa string)  {
+	fmt.Printf("Haiii %v", sapa)
+}
+	sapaSaya("Elvira")
+
+	// Immediately Invoked Function Expression / IIFE
+	func ()  {
+		fmt.Println("function ini langsung dijalankan!")
+	}()
+
+
+	// Function as Parameter (First-Class Functions)
+	hurufBesar := func (nama string) string {
+		return strings.ToUpper(nama)
+	}
+
+	sapaKawan("elvira maharani", hurufBesar)
 }

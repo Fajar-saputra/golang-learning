@@ -1,11 +1,10 @@
 package main
 
-import (
-	"fmt"
-
-	)
+import "fmt"
 
 func main()  {
 	
+	belajarFunc()
+
 	fmt.Println("Hello asep")
 }
