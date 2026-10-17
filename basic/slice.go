@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+"reflect"
+)
 
 func belajarSlice()  {
 	
@@ -58,5 +61,15 @@ func belajarSlice()  {
 	fmt.Println(iniArray)
 	fmt.Println(iniSlice)
 
-	// masih banyak yang salah
+	fmt.Println("panjang dari wargaPadang : ", cap(wargaPadang))
+	fmt.Println("type date dari wargaPadang : ", reflect.TypeOf(wargaPadang))
+	fmt.Println("type date dari dataWarga : ", reflect.TypeOf(dataWarga))
+
+	// cara hapus data di slice
+	dataAwal := []int{1,2,3,4,5,6,7,8,9}
+	
+	for _, angka := range dataAwal {
+		fmt.Println("Angka : ", angka)
+	}
+
 }
