@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-"reflect"
+	"reflect"
 )
 
 func belajarSlice()  {
@@ -65,11 +65,58 @@ func belajarSlice()  {
 	fmt.Println("type date dari wargaPadang : ", reflect.TypeOf(wargaPadang))
 	fmt.Println("type date dari dataWarga : ", reflect.TypeOf(dataWarga))
 
-	// cara hapus data di slice
+	// loop slice
 	dataAwal := []int{1,2,3,4,5,6,7,8,9}
 	
 	for _, angka := range dataAwal {
 		fmt.Println("Angka : ", angka)
 	}
 
+	// cara hapus data di slice
+	indexYgDiHapus := 2
+
+	dataAwal = append(dataAwal[:indexYgDiHapus], dataAwal[indexYgDiHapus+1:]...)
+
+	fmt.Println(dataAwal)
+
+
+	// cara copy yang benar	
+	mahasiswa := [...]string{"iqbal", "fazil", "riko", "adrian", "refalldo", "mulya", "gilang","yandra"}
+	mahasiswaNonIT := mahasiswa[5:]
+
+	
+	fmt.Println(mahasiswa)
+	fmt.Println(mahasiswaNonIT)
+	fmt.Println("Type data : ", reflect.TypeOf(mahasiswa))
+	fmt.Println("Type data : ", reflect.TypeOf(mahasiswaNonIT))
+
+
+	sumber := []int{1,2,3,4,5,6}
+	tujuan := make([]int , len(sumber))
+
+	copy(tujuan, sumber)
+
+	tujuan = append(tujuan[:2], tujuan[3:]...)
+
+	fmt.Println(sumber)
+	fmt.Println(tujuan)
+
+	// copy yang benar
+	items := []int{1,2,3,4,6,7,8,9}
+
+	fmt.Println(getDataWrong(items))
 }
+
+	func getDataWrong(items []int)  []int{
+		data := items
+		return data[0:10]
+	}
+
+	func getDataCurrent(items []int) []int {
+		// buat slice baru
+		data := make([]int, 10)
+		// copy isinya
+		copy(data, items[10:])
+		// return data
+		return data
+	}
